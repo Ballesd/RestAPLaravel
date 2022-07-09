@@ -8,9 +8,10 @@
     <link rel="stylesheet" href="style.css">
     <title>front</title>
 </head>
-<body>
-    <div class="p-4 bg-secondary bg-gradient bg-opacity-10%">
-        <section id ="contenedor_form"   class="container p-4 col-lg-10 bg-white rounded-15">
+<body class="p-4 bg-secondary bg-gradient bg-opacity-10">
+    <div>
+        <section id ="contenedor_form" class="container p-4 col-lg-10 bg-white rounded-15">
+            <h4>Tabla de los datos del Backend</h4>
             <table class="table table-stripe">
                 <thead class="table table-dark">
                     <tr>
@@ -27,6 +28,32 @@
             </table>
         </section>
     </div>
+    <section id ="contenedor_form" class="container p-4 col-lg-4 bg-white">
+        <div >
+            <h4>Formulario para el envio de datos</h4>
+            <form>
+                <div class="form-group">
+                  <label for="EjemploNombre">Name:</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Nombre de la compañia">
+                </div>
+                <div class="form-group">
+                    <label for="EjemploCorreo">Email:</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Corre electronico">
+                </div>
+                <div class="form-group">
+                    <label for="EjemploTelefono">Phone:</label>
+                    <input type="text" class="form-control" id="phone" name="phone" placeholder="telefono">
+                </div>
+                <div class="form-group">
+                    <label for="EjemploCiudad">City:</label>
+                    <input type="number" class="form-control" id="city" name="city" placeholder="Ciudad">
+                </div>
+                <center>
+                    <button type="submit" class="btn btn-success">Enviar</button>
+                </center>
+              </form>
+        </div>
+    </section>
 </body>
 <script src = "script.js"></script>
 </html>
