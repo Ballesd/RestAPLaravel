@@ -36,4 +36,33 @@ fetch(url)
     }
     document.getElementById("DatosAPI").innerHTML = datos;
 });
-    
+  
+
+const form = document.getElementById("TransData");
+
+form.addEventListener('submit', cargaDatos);
+
+function cargaDatos(event) {
+    event.preventDefault();
+    const MyFormData = new FormData(event.target);
+    const formDataObj = {};
+    MyFormData.forEach((value, key) => (formDataObj[key] = value));
+    console.log(formDataObj);
+    fetch("http://127.0.0.1:8000",{
+        method: "POST",
+    });
+}
+/*
+function convertFormDataToTransactionObj
+
+function saveTransactionObj(transactionObj){
+    let MyTransArray = JSON.parse(localStorage.getItem()) || [];
+    MyTransArray.push(transactionObj);
+    //Concierto array a json 
+    let TransArrayJSON = JSON.stringify(MyTransArray);
+
+    fetch("http://127.0.0.1:8000",{
+        method: "POST",
+    });
+}
+*/
