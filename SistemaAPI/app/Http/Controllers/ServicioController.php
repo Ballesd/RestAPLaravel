@@ -14,7 +14,7 @@ class ServicioController extends Controller
      */
     public function index()
     {
-        return servicio::with('proov')->get();
+        return servicio::with('proovedor')->get();
     }
 
     /**
