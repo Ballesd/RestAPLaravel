@@ -48,7 +48,7 @@ function cargaDatos(event) {
     const formDataObj = {};
     MyFormData.forEach((value, key) => (formDataObj[key] = value));
     console.log(formDataObj);
-    fetch("http://127.0.0.1:8000",{
+    fetch("http://127.0.0.1:8000/api/company/",{
         method: "POST",
     });
 }

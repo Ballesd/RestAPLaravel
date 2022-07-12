@@ -2,7 +2,7 @@
 Creación de Rest API con Laravel, transforma los datos de una base de datos(MYSQL) en formato JSON 
 
 
-## Pasos para dar pie al acceso de la rest API con Django
+## Pasos para dar pie al acceso de la rest API con Laravel
 
 Installamos corsheaders
 
