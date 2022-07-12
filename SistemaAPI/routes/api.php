@@ -18,6 +18,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 Route::resource('company',App\Http\Controllers\CompanyController::class);
-Route::group(['middleware' => ['cors']], function () {
-    return view('company');
-});
+Route::apiResource('/proveedors',App\Http\Controllers\ProveedorController::class);
+Route::apiResource('/servicios',App\Http\Controllers\ServicioController::class);
