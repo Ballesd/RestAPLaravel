@@ -52,17 +52,3 @@ function cargaDatos(event) {
         method: "POST",
     });
 }
-/*
-function convertFormDataToTransactionObj
-
-function saveTransactionObj(transactionObj){
-    let MyTransArray = JSON.parse(localStorage.getItem()) || [];
-    MyTransArray.push(transactionObj);
-    //Concierto array a json 
-    let TransArrayJSON = JSON.stringify(MyTransArray);
-
-    fetch("http://127.0.0.1:8000",{
-        method: "POST",
-    });
-}
-*/
