@@ -11,8 +11,8 @@ class servicio extends Model
     use HasFactory;
     protected $fillable = ['FechaIngreso','Description','Price','Proveedors_id'];
 
-    public function proov(){
-        return $this->belongsTo(proveedor::class,'Proveedors_id ');
+    public function proovedor(){
+        return $this->belongsTo(proveedor::class,'Proveedors_id');
 
     }
 }
