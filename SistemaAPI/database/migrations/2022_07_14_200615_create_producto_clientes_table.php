@@ -15,7 +15,17 @@ class CreateProductoClientesTable extends Migration
     {
         Schema::create('producto_clientes', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->foreignId('cliente_id')
+                ->nullable()
+                ->constrained('clientes')
+                ->cascadeOnUpdate()
+                ->nullOnDelete();
+
+            $table->foreignId('productos_id')
+                ->nullable()
+                ->constrained('productos')
+                ->cascadeOnUpdate()
+                ->nullOnDelete();
         });
     }
 

@@ -16,7 +16,7 @@ class CreateServiciosTable extends Migration
         Schema::create('servicios', function (Blueprint $table) {
             $table->id();
             $table->timestamp('FechaIngreso')->useCurrent = true;
-            $table->text('Description',300);
+            $table->text('Description',300); 
             $table->integer('Price');
 
             $table->foreignId('Proveedors_id')
