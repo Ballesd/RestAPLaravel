@@ -20,3 +20,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::resource('company',App\Http\Controllers\CompanyController::class);
 Route::apiResource('/proveedors',App\Http\Controllers\ProveedorController::class);
 Route::apiResource('/servicios',App\Http\Controllers\ServicioController::class);
+Route::apiResource('/clientes', 'App\Http\Controllers\RelationController'::class);
