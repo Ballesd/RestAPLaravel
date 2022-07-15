@@ -11,6 +11,6 @@ class RelationController extends Controller
     public function index(){
         $cliente = Cliente::find(1);
         $producto = Producto::find(2);
-        return view('welcome',compact('cliente', 'producto')); 
+        return view('welcome',compact('cliente','producto'));
     }
 }

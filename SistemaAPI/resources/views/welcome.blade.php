@@ -4,30 +4,45 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Bootstrap 101 Template</title>
-
-    <!-- Bootstrap -->
+    <title></title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
   </head>
   <body>
-    <h3>Cliente <span>{{$cliente->nombre}}</span> cursa las materias: </h3>
+    <div>
+      <h3>Alumno: <span>{{ $alumno->nombre }}</span> cursa las materias: </h3>
 
-    <table>
-        <thead>
-            <th>Productos</th>
-        </thead>
-        <tbody>
-            @foreach($cliente->productos as $resgiter)
-            <tr>
-                <td>{{ $resgiter->nombre }}</td>
-            </tr>
+      <table>
+          <thead>
+              <th>MATERIAS</th>
+          </thead>
+          <tbody>
+              @foreach($alumno->materias as $register)
+              <tr>
+                  <td>{{ $register->nombre }}</td>
+              </tr>
 
-            @endforeach
-        </tbody>
-    </table>
+              @endforeach
+          </tbody>
+      </table>
+    </div>
+    <div>
+      <h3>Materia: <span>{{ $materia->nombre }}</span> cursa las alumnos: </h3>
 
+      <table>
+          <thead>
+              <th>Alumnos</th>
+          </thead>
+          <tbody>
+              @foreach($materia->alumnos as $register)
+              <tr>
+                  <td>{{ $register->nombre }}</td>
+              </tr>
+
+              @endforeach
+          </tbody>
+      </table>
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
     <script src="js/bootstrap.min.js"></script>
